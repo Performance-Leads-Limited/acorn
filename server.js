@@ -5,12 +5,12 @@ const app = express();
 // Use port 8080 or environment variable
 const port = process.env.PORT || 8080;
 
-// Serve static files from 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from 'docs' directory (GitHub Pages standard)
+app.use(express.static(path.join(__dirname, 'docs')));
 
-// Catch-all route to serve index.html (optional for SPA, good for static site)
+// Catch-all route
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 });
 
 app.listen(port, () => {
