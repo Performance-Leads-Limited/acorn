@@ -434,14 +434,65 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+
+/* Tablet (Portrait) and Mobile */
+@media (max-width: 992px) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.8rem;
     }
 
     .content-split {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 40px;
+    }
+
+    .letter-preview img {
+        margin: 0 auto;
+        display: block;
+        max-width: 80%;
+    }
+
+    .text-block {
+        order: 1;
+        /* Text first */
+    }
+
+    .form-block {
+        order: 2;
+        /* Form second */
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        font-weight: 600;
+        /* Slightly lighter on small screens */
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 !important;
+        /* Reset margin from btn-secondary */
     }
 
     .form-row {
@@ -450,6 +501,30 @@ footer {
 
     .sponsor-card.featured {
         transform: scale(1);
+    }
+
+    /* Ensure cards fit on small screens */
+    .sponsorship-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Small Mobiles (iPhone SE etc) */
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .club-name {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        height: 40px;
     }
 }
 
